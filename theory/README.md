@@ -6,25 +6,36 @@ Find regexes that match the following.
 
 * Regex that matches:
 
-    antelope
-    antelopes
+  antelope
+
+  antelopes
+
+      /antelopes?/
 
 * Regex that matches:
 
-    goat
-    moat
+  goat
 
-  but not 
+  moat
 
-    boat
+  but not
+
+  boat
+
+      /[gm]oat/
 
 * Regex that matches dates in YYYY-MM-DD format. This does not need to
   verify the date is correct.
 
   2000-10-12
+
   1999-1-20
+
   1999-01-20
+
   812-2-10
+
+      /\d{1,4}-\d{1,2}-\d{1,2}/
 
 ## State Machines
 
@@ -33,7 +44,7 @@ Find regexes that match the following.
       ab*c+d?[ef]
 
   Remember the ε transition can be used to move between states without
-  consuming input. 
+  consuming input.
 
 * A lion can be sleeping, eating, hunting, or preening. Draw a state
   machine diagram for the lion and label the transition events that
@@ -56,6 +67,10 @@ Find regexes that match the following.
     cursor position should accept any digits for the row and column. The
     bold sequence need only accept `1` (and is a trivial regex). (ESC is
     a single character which can be represented with `\e` in the regex.)
+
+        /\e\[\d+;\d+f/
+
+        /\e\[1m/
 
   * Draw a state machine diagram for a VT-100 that can consume regular
     character sequences as well as the two above ESC sequences.
