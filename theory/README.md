@@ -2,7 +2,8 @@
 
 ## Regular Expressions
 
-Find regexes that match the following.
+Find regexes that match the following. (e.g. find a single regex that matches
+both `antelope` and `antelopes`.)
 
 * Regex that matches:
 
@@ -24,8 +25,9 @@ Find regexes that match the following.
 
       /[gm]oat/
 
-* Regex that matches dates in YYYY-MM-DD format. This does not need to
-  verify the date is correct.
+* Regex that matches dates in YYYY-MM-DD format. (Year can be 1-4 digits, and
+  month and day can each be 1-2 digits). This does not need to verify the date
+  is correct.
 
   2000-10-12
 
@@ -38,6 +40,9 @@ Find regexes that match the following.
       /\d{1,4}-\d{1,2}-\d{1,2}/
 
 ## State Machines
+
+> A useful tool for drawing state machines is [Evan's FSM
+> Designer](http://madebyevan.com/fsm/).
 
 * Draw a state machine that corresponds to the following regex:
 
